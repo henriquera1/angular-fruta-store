@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "loginfrutas-a3339": {
+      "hosting": {
+        "angular-http": [
+          "loginfrutas-a3339"
+        ]
+      }
+    }
+  }
+}

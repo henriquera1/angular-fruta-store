@@ -1,0 +1,25 @@
+<h3 class="text-center mt-2">Carrinho</h3>
+
+<div class="card card border-primary">
+  <div class="card-header text-center">
+    Frutas no carrinho
+  </div>
+  <div class="card-group mb-4 " *ngFor="let produto of items">
+    <div class="col-md-2">
+      <a><img src="\assets\img\{{produto.fotoFruta}}" alt="" width="100" height="100"></a>
+    </div>
+    <div>
+      <h5 class="card-title text-warning ms-2">{{produto.nomeFruta}}</h5>
+      <p class="card-text ms-2">{{produto.descricaoFruta}}</p>
+      <p class="text-primary ms-2">{{produto.valorFruta | currency: 'BRL': 'symbol': '.2-2'}}</p>
+      <p class="text-muted ms-2">Quantidade em estoque: {{produto.qtdFruta}}</p>
+      <br>   
+    </div> 
+  </div>
+  <div class="d-flex flex-row-reverse bd-highlight">
+    <button type="submit" class="btn btn btn-secondary btn-add-fruta p-2 m-1" (click)="limparCarrinho()">Limpar Carrinho</button>
+    <button type="submit" class="btn btn btn-primary btn-add-fruta p-2 m-1">Finalizar Compra</button>
+  </div>
+  
+</div>
+<router-outlet></router-outlet>
